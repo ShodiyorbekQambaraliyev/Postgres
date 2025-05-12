@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    <h1>salom</h1>
+    <div class="mx-auto mt-5 w-[300px] text-center bg-gray-200 p-5 rounded-lg">
+        <h1 class="text-[35px]">Talabalar ro'yxati</h1>
+        <ul>
+            {% for talaba in talabalar %}
+            <li class="text-[20px] text-red-600">{{ talaba.ism }} - {{ talaba.yosh }} yosh</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
+
 </html>

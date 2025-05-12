@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from .models import Talaba
 
 def index(request):
-    return render(request, 'index.html')
-
+    talabalar = Talaba.objects.all()
+    return render(request, 'index.html', {'talabalar': talabalar})
 
